@@ -1,3 +1,5 @@
+
+
 $('#prvni').click(e =>{
    
     console.log('Yeah, you clicked me')
@@ -14,6 +16,13 @@ $('#druhe').click(e =>{
 
 
 $('#treti').click(e =>{
-    $('button').css('background-color', 'green');    
-    console.log(e);
+    e.preventDefault();
+    $('#treti').prop('disabled',true);
+    var textw = $('#barva').val();
+    $('button').css('background-color', textw);    
+    console.log(e);    
 })
+
+
+
+
